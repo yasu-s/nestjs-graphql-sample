@@ -1,4 +1,30 @@
 {
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src"
+  "sourceRoot": "apps/code-first/src",
+  "monorepo": true,
+  "root": "apps/code-first",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/code-first/tsconfig.app.json"
+  },
+  "projects": {
+    "code-first": {
+      "type": "application",
+      "root": "apps/code-first",
+      "entryFile": "main",
+      "sourceRoot": "apps/code-first/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/code-first/tsconfig.app.json"
+      }
+    },
+    "schema-first": {
+      "type": "application",
+      "root": "apps/schema-first",
+      "entryFile": "main",
+      "sourceRoot": "apps/schema-first/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/schema-first/tsconfig.app.json"
+      }
+    }
+  }
 }
