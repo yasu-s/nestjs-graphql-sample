@@ -1,4 +1,30 @@
 {
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src"
+  "sourceRoot": "apps/nestjs-graphql-sample/src",
+  "monorepo": true,
+  "root": "apps/nestjs-graphql-sample",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/nestjs-graphql-sample/tsconfig.app.json"
+  },
+  "projects": {
+    "nestjs-graphql-sample": {
+      "type": "application",
+      "root": "apps/nestjs-graphql-sample",
+      "entryFile": "main",
+      "sourceRoot": "apps/nestjs-graphql-sample/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/nestjs-graphql-sample/tsconfig.app.json"
+      }
+    },
+    "schema-first": {
+      "type": "application",
+      "root": "apps/schema-first",
+      "entryFile": "main",
+      "sourceRoot": "apps/schema-first/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/schema-first/tsconfig.app.json"
+      }
+    }
+  }
 }
