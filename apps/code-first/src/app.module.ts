@@ -5,6 +5,6 @@ import { AuthorResolver } from './authors.resolver';
 
 @Module({
   providers: [AuthorResolver],
-  imports: [GraphQLModule.forRoot({ autoSchemaFile: true, playground: true })],
+  imports: [GraphQLModule.forRoot({ autoSchemaFile: true, playground: true, debug: true, tracing: true })],
 })
 export class AppModule {}

@@ -13,6 +13,9 @@ import { AuthorsResolver } from './authors.resolver';
         path: join(process.cwd(), 'apps/schema-first/src/graphql.ts'),
         outputAs: 'class',
       },
+      playground: true,
+      debug: true,
+      tracing: true,
     }),
   ],
 })
